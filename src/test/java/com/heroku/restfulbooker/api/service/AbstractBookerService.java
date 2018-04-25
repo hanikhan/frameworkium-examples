@@ -1,6 +1,6 @@
 package com.heroku.restfulbooker.api.service;
 
-import com.frameworkium.core.api.services.BaseService;
+import com.frameworkium.api.services.BaseService;
 import com.heroku.restfulbooker.api.constant.BookerEndpoint;
 import io.restassured.RestAssured;
 import io.restassured.http.Method;

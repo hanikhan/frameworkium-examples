@@ -1,6 +1,6 @@
 package com.heroku.restfulbooker.api.dto.booking;
 
-import com.frameworkium.core.api.dto.AbstractDTO;
+import com.frameworkium.api.dto.AbstractDTO;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

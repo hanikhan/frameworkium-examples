@@ -1,6 +1,6 @@
 package ai.capture.api.dto.screenshots;
 
-import com.frameworkium.core.api.dto.AbstractDTO;
+import com.frameworkium.api.dto.AbstractDTO;
 
 public class Screenshot extends AbstractDTO<Screenshot> {
 

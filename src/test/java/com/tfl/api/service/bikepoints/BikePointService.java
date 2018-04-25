@@ -4,7 +4,7 @@ import com.tfl.api.dto.bikepoints.BikePoints;
 import com.tfl.api.dto.common.Place;
 import com.tfl.api.dto.common.PlacesResponse;
 import com.tfl.api.service.BaseTFLService;
-import ru.yandex.qatools.allure.annotations.Step;
+import io.qameta.allure.Step;
 
 import java.util.Map;
 

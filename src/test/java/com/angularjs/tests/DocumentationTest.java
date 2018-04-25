@@ -1,7 +1,7 @@
 package com.angularjs.tests;
 
 import com.angularjs.pages.HomePage;
-import com.frameworkium.core.ui.tests.BaseUITest;
+import com.frameworkium.ui.tests.BaseUITest;
 import org.testng.annotations.Test;
 
 import static com.google.common.truth.Truth.assertThat;

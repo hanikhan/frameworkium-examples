@@ -3,7 +3,7 @@ package com.tfl.api.service.carparks;
 import com.tfl.api.dto.carparkoccupancy.CarParkOccupancies;
 import com.tfl.api.dto.carparkoccupancy.CarParkOccupancy;
 import com.tfl.api.service.BaseTFLService;
-import ru.yandex.qatools.allure.annotations.Step;
+import io.qameta.allure.Step;
 
 import static com.tfl.api.constant.Endpoint.CAR_PARK_OCCUPANCY;
 import static com.tfl.api.constant.Endpoint.CAR_PARK_OCCUPANCY_BY_ID;

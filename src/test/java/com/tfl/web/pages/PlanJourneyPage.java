@@ -1,17 +1,17 @@
 package com.tfl.web.pages;
 
-import com.frameworkium.core.ui.annotations.Visible;
-import com.frameworkium.core.ui.pages.BasePage;
-import com.frameworkium.core.ui.pages.PageFactory;
+import com.frameworkium.ui.annotations.Visible;
+import com.frameworkium.ui.pages.BasePage;
+import com.frameworkium.ui.pages.PageFactory;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import ru.yandex.qatools.allure.annotations.Step;
+import io.qameta.allure.Step;
 import ru.yandex.qatools.htmlelements.annotations.Name;
 
 import java.util.List;
 
-import static com.frameworkium.core.ui.ExtraExpectedConditions.notPresentOrInvisible;
-import static com.frameworkium.core.ui.ExtraExpectedConditions.sizeGreaterThan;
+import static com.frameworkium.ui.ExtraExpectedConditions.notPresentOrInvisible;
+import static com.frameworkium.ui.ExtraExpectedConditions.sizeGreaterThan;
 
 public class PlanJourneyPage extends BasePage<PlanJourneyPage> {
 

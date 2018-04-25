@@ -1,9 +1,9 @@
 package com.tfl.web.tests;
 
-import com.frameworkium.core.ui.tests.BaseUITest;
+import com.frameworkium.ui.tests.BaseUITest;
 import com.tfl.web.pages.*;
 import org.testng.annotations.Test;
-import ru.yandex.qatools.allure.annotations.TestCaseId;
+import io.qameta.allure.TmsLink;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -11,7 +11,7 @@ public class PlanJourneyTest extends BaseUITest {
 
     // disabled due to lack of time for maintenance
     // still useful as an example
-    @TestCaseId("TFL-1")
+    @TmsLink("TFL-1")
     @Test(description = "Plan a journey test", enabled = false)
     public final void planJourneyTest() {
 

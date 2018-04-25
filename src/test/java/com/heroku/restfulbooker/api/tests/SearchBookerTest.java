@@ -1,7 +1,7 @@
 package com.heroku.restfulbooker.api.tests;
 
-import com.frameworkium.core.api.tests.BaseAPITest;
-import com.frameworkium.core.common.retry.RetryFlakyTest;
+import com.frameworkium.api.tests.BaseAPITest;
+import com.frameworkium.base.RetryFlakyTest;
 import com.heroku.restfulbooker.api.dto.booking.Booking;
 import com.heroku.restfulbooker.api.dto.booking.BookingID;
 import com.heroku.restfulbooker.api.dto.booking.search.SearchParamsMapper;

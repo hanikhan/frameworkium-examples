@@ -4,8 +4,8 @@ import ai.capture.api.constant.CaptureEndpoint;
 import ai.capture.api.dto.executions.*;
 import ai.capture.api.service.BaseCaptureService;
 import com.google.common.collect.ImmutableMap;
+import io.qameta.allure.Step;
 import org.apache.http.HttpStatus;
-import ru.yandex.qatools.allure.annotations.Step;
 
 /** Encapsulates the Capture ExecutionResponse service */
 public class ExecutionService extends BaseCaptureService {

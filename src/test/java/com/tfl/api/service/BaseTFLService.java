@@ -1,6 +1,6 @@
 package com.tfl.api.service;
 
-import com.frameworkium.core.api.services.BaseService;
+import com.frameworkium.api.services.BaseService;
 import com.tfl.api.constant.Endpoint;
 import io.restassured.RestAssured;
 import io.restassured.specification.RequestSpecification;

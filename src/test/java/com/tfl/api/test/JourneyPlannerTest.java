@@ -1,6 +1,6 @@
 package com.tfl.api.test;
 
-import com.frameworkium.core.api.tests.BaseAPITest;
+import com.frameworkium.api.tests.BaseAPITest;
 import com.tfl.api.dto.journeyplanner.DisambiguationResult;
 import com.tfl.api.service.journeyplanner.DisambiguationService;
 import com.tfl.api.service.journeyplanner.ItineraryService;

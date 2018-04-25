@@ -1,12 +1,12 @@
 package com.heroku.theinternet.pages;
 
-import com.frameworkium.core.ui.annotations.Visible;
-import com.frameworkium.core.ui.pages.BasePage;
-import com.frameworkium.core.ui.pages.PageFactory;
+import com.frameworkium.ui.annotations.Visible;
+import com.frameworkium.ui.pages.BasePage;
+import com.frameworkium.ui.pages.PageFactory;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import ru.yandex.qatools.allure.annotations.Step;
+import io.qameta.allure.Step;
 import ru.yandex.qatools.htmlelements.annotations.Name;
 import ru.yandex.qatools.htmlelements.element.TextInput;
 

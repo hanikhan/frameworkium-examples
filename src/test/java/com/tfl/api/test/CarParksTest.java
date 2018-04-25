@@ -1,7 +1,7 @@
 package com.tfl.api.test;
 
-import com.frameworkium.core.api.tests.BaseAPITest;
-import com.frameworkium.core.common.retry.RetryFlakyTest;
+import com.frameworkium.api.tests.BaseAPITest;
+import com.frameworkium.base.RetryFlakyTest;
 import com.tfl.api.dto.carparkoccupancy.CarParkOccupancies;
 import com.tfl.api.dto.carparkoccupancy.CarParkOccupancy;
 import com.tfl.api.service.carparks.CarParkOccupancyService;

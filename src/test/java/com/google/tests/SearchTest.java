@@ -1,16 +1,16 @@
 package com.google.tests;
 
-import com.frameworkium.core.ui.tests.BaseUITest;
+import com.frameworkium.ui.tests.BaseUITest;
 import com.google.pages.HomePage;
 import com.google.pages.ResultsPage;
 import org.testng.annotations.Test;
-import ru.yandex.qatools.allure.annotations.TestCaseId;
+import io.qameta.allure.TmsLink;
 
 import static com.google.common.truth.Truth.assertThat;
 
 public class SearchTest extends BaseUITest {
 
-    @TestCaseId("FT-1")
+    @TmsLink("FT-1")
     @Test(description = "Run a search on Google and check result returned",
             enabled = false) // not working on Travis...
     public void searchTest() {

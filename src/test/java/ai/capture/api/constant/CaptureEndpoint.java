@@ -1,6 +1,6 @@
 package ai.capture.api.constant;
 
-import com.frameworkium.core.api.Endpoint;
+import com.frameworkium.api.Endpoint;
 
 /** The various Endpoints of Capture. */
 public enum CaptureEndpoint implements Endpoint {

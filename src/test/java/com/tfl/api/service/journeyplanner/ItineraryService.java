@@ -3,7 +3,7 @@ package com.tfl.api.service.journeyplanner;
 import com.tfl.api.dto.journeyplanner.Itinerary;
 import com.tfl.api.service.BaseTFLService;
 import com.google.common.collect.ImmutableMap;
-import ru.yandex.qatools.allure.annotations.Step;
+import io.qameta.allure.Step;
 
 import java.util.Map;
 

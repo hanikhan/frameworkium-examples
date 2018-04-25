@@ -2,7 +2,7 @@ package com.tfl.api.dto.bikepoints;
 
 import com.tfl.api.dto.common.Place;
 import com.tfl.api.dto.common.PlacesResponse;
-import ru.yandex.qatools.allure.annotations.Step;
+import io.qameta.allure.Step;
 
 import java.util.Arrays;
 import java.util.List;

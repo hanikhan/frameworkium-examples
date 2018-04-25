@@ -1,13 +1,13 @@
 package com.tfl.api.test;
 
-import com.frameworkium.core.api.tests.BaseAPITest;
+import com.frameworkium.api.tests.BaseAPITest;
 import com.tfl.api.dto.bikepoints.BikePoints;
 import com.tfl.api.dto.common.Place;
 import com.tfl.api.service.bikepoints.BikePointService;
 import com.tfl.api.service.bikepoints.BikePointsParamsBuilder;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import ru.yandex.qatools.allure.annotations.TestCaseId;
+import io.qameta.allure.TmsLink;
 
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public class BikePointsTest extends BaseAPITest {
         bikePoints = new BikePointService().getBikePoints();
     }
 
-    @TestCaseId("BP-1")
+    @TmsLink("BP-1")
     public void all_bikes_contains_a_known_place_and_there_are_a_lot_of_them() {
 
         List<String> allNames = bikePoints.getAllNames();
@@ -33,7 +33,7 @@ public class BikePointsTest extends BaseAPITest {
         assertThat(allNames.size()).isAtLeast(700);
     }
 
-    @TestCaseId("BP-2")
+    @TmsLink("BP-2")
     public void given_lat_long_of_point_point_appears_in_lat_long_search() {
 
         // Get random bike point
