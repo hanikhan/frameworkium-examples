@@ -12,7 +12,7 @@ public class SearchTest extends BaseUITest {
 
     @TmsLink("FT-1")
     @Test(description = "Run a search on Google and check result returned",
-            enabled = false) // not working on Travis...
+            enabled = true) // not working on Travis...
     public void searchTest() {
 
         // Navigate to google and run a search
