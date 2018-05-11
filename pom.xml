@@ -56,21 +56,21 @@
         </exclusion>
       </exclusions>
     </dependency>
-    <dependency>
-      <groupId>com.github.frameworkium</groupId>
-      <artifactId>frameworkium-jira</artifactId>
-      <version>0.8</version>
-      <exclusions>
-        <exclusion>
-          <groupId>info.cukes</groupId>
-          <artifactId>cucumber-java</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>info.cukes</groupId>
-          <artifactId>cucumber-testng</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>com.github.frameworkium</groupId>-->
+      <!--<artifactId>frameworkium-jira</artifactId>-->
+      <!--<version>0.8</version>-->
+      <!--<exclusions>-->
+        <!--<exclusion>-->
+          <!--<groupId>info.cukes</groupId>-->
+          <!--<artifactId>cucumber-java</artifactId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+          <!--<groupId>info.cukes</groupId>-->
+          <!--<artifactId>cucumber-testng</artifactId>-->
+        <!--</exclusion>-->
+      <!--</exclusions>-->
+    <!--</dependency>-->
     <dependency>
       <groupId>com.google.truth</groupId>
       <artifactId>truth</artifactId>
