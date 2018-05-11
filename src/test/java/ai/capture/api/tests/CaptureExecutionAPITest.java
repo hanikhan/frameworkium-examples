@@ -35,7 +35,7 @@ public class CaptureExecutionAPITest extends BaseAPITest {
                 .executionID;
     }
 
-    @Test
+    @Test(enabled = false)
     public void execution_appears_in_results() {
         ExecutionResults latestExecutions =
                 new ExecutionService().getExecutions(1, 10);
@@ -56,7 +56,7 @@ public class CaptureExecutionAPITest extends BaseAPITest {
         assertThat(response.createdFrom(createExMessage)).isTrue();
     }
 
-    @Test
+    @Test(enabled = false)
     public void new_execution_has_status_new_and_last_updated_equals_created() {
         String id = new ExecutionService()
                 .createExecution(createExMessage)
@@ -70,7 +70,7 @@ public class CaptureExecutionAPITest extends BaseAPITest {
         assertThat(execution.lastUpdated).isEqualTo(execution.created);
     }
 
-    @Test
+    @Test(enabled = false)
     public void can_add_then_view_screenshot() {
         CreateScreenshot createScreenshot = CreateScreenshot.newInstance(executionID);
         new ScreenshotService().createScreenshot(createScreenshot);
