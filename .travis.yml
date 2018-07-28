@@ -12,7 +12,9 @@ addons:
 install: true # disable default mvn install
 
 notifications:
-  slack: qaengineering:eTRqy0JhQOUtKHNO8mKLc8NC
+  slack:
+    rooms:
+      secure: St3BNGfw3AvH83b/cB2sJcQTRjf4QRupamWNfeQWNttlV/mUVuEpUxxnciJr9y8S9qlIcY9J+Nl9BkdTFHnwZfGpsSfcP7i6F4TsBwCCW3D7/4LJ521TUqsk7JRqjudCmyJgQUKWC6gkAboh8FBm5ipMbBMOwpTVV87OnwTsjR4A3Gr/dTYL1AFormx4dhDIKL1Hod1M6uV8vwPDRQt23nbuQuVps5SqpSwgKNt4QMB7oTRHRcIvzRgRhHnRHR/2wfK94m/4eil18jG0FQjeUEDIRFYE+fme3lpnvQcDl4sQKIDzEsiaF6YBTqyTQ1xKgKwMTs/gyj7txJxazH05wmordNEfH+TMbBF8ULlxLuEnu0nyrjZ4qPj8GKuFSVY6E/VHg+wqnqkjlhq5AnWoUR9iON1aDtGCfEYZbAztR430hLgZ58HEutuCuUfPWm+QSKJddNKFUOVJVlRdr6NGx7WEUM7CsHR3Pj0GVCDCTSLTbxC1wVnWxFoErqbgCCDTxRXNFBKD6WDe6IFm5nr5dWOZXIXL9D0Yg16Pp7HFio+2Rx8LzHnaVPvS+Ss6TX5Sk2z/JzajKbnfnT3qLzqPXdh7dPHCK/gvvQn64Iz2PA/PsKEiY8SoOxh17VWC74ltnxtj4B5OCQmCLovzSX/XU1YrPqtdus4BDhptg5mCl6g=
 
 env:
   global:
@@ -20,11 +22,11 @@ env:
     - SUT_NAME="frameworkium-examples"
     - SUT_VERSION=${TRAVIS_BRANCH}
     - THREAD_COUNT=2
-    - SELENIUM_MAJ_VER=3.10
+    - SELENIUM_MAJ_VER=3.13
     - SELENIUM_VER=${SELENIUM_MAJ_VER}.0
     - SELENIUM_JAR=selenium-server-standalone-${SELENIUM_VER}.jar
-    - GECKO_VER=0.19.1
-    - CHROME_DRIVER_VER=2.35
+    - GECKO_VER=0.21.1
+    - CHROME_DRIVER_VER=2.41
     # override Travis default to give browsers more room
     - _JAVA_OPTIONS="-Xmx1024m -Xms128m"
     # Required to turn on workaround for the following issue:
@@ -67,10 +69,10 @@ script:
   - mvn verify -B -Dthreads=${THREAD_COUNT} -Dbrowser=chrome -DreuseBrowser=true -Dheadless=true -DgridURL=http://localhost:4444/wd/hub -DcaptureURL=${CAPTURE_URL} -DsutName="${SUT_NAME}" -DsutVersion="${SUT_VERSION}"
 
   # Query Jira for which test to run and then log results to Jira
-  - mvn verify -B -Dbrowser=chrome -Dheadless=true -DgridURL=http://localhost:4444/wd/hub -DjiraURL="http://52.29.130.45:8080" -DjqlQuery="issueKey=TEST-1" -DresultVersion="BUILD TEST VERSION" -DzapiCycleRegex="Test Cycle" -DjiraUsername=frameworkium -DjiraPassword=frameworkium -DcaptureURL=${CAPTURE_URL} -DsutName="${SUT_NAME}" -DsutVersion="${SUT_VERSION}"
+  # - mvn verify -B -Dbrowser=chrome -Dheadless=true -DgridURL=http://localhost:4444/wd/hub -DjiraURL="http://52.29.130.45:8080" -DjqlQuery="issueKey=TEST-1" -DresultVersion="BUILD TEST VERSION" -DzapiCycleRegex="Test Cycle" -DjiraUsername=frameworkium -DjiraPassword=frameworkium -DcaptureURL=${CAPTURE_URL} -DsutName="${SUT_NAME}" -DsutVersion="${SUT_VERSION}"
 
   # SauceLabs- disabled until we have a sauce account to use
   # - mvn verify -Dsauce=true -Dplatform=ios -Dbrowser=safari -DplatformVersion=8.0 -Ddevice=iPad -DcaptureURL=${CAPTURE_URL} -DsutName="${SUT_NAME}" -DsutVersion="${SUT_VERSION}"
 
   # Allure report
-  - mvn site -B --quiet
+  - mvn allure:report
